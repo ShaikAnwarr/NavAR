@@ -24,7 +24,7 @@ fun SplashScreen(navigateToMain: () -> Unit) {
         contentAlignment = Alignment.Center
     ) {
         Image(
-            painter = painterResource(id = R.drawable.splash_screen_img),
+            painter = painterResource(id = R.drawable.splashscreen),
             contentDescription = null,
             contentScale = ContentScale.Crop,
             modifier = Modifier.fillMaxSize()

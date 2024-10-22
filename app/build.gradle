@@ -82,4 +82,8 @@ dependencies {
 
     // ZXing library for barcode scanning
     implementation 'com.google.zxing:core:3.5.0'
+
+    //system Ui controller dependencies
+    implementation "com.google.accompanist:accompanist-systemuicontroller:0.31.0-alpha"
+
 }
