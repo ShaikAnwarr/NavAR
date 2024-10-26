@@ -25,7 +25,7 @@ fun AppNavigator() {
     if (showSplashScreen.value) {
         // Set the status bar color for SplashScreen
         systemUiController.setStatusBarColor(
-            color = Color.Transparent,
+            color = Color(0xFFFFA500),
             darkIcons = false
         )
 
@@ -38,7 +38,7 @@ fun AppNavigator() {
     } else if (showMainScreen.value) {
         // Set the status bar color for MainScreen
         systemUiController.setStatusBarColor(
-            color = Color.Transparent,
+            color = Color(0xFFFFA500),
             darkIcons = true
         )
 
@@ -65,7 +65,7 @@ fun AppNavigator() {
     } else if (showQrScanner.value) {
         // Set the status bar color for QR Scanner Screen
         systemUiController.setStatusBarColor(
-            color = Color.Transparent,
+            color = Color(0xFFFFA500),
             darkIcons = true
         )
 
@@ -79,7 +79,7 @@ fun AppNavigator() {
     } else if (showMoreScreen.value) {
         // Set the status bar color for MoreScreen
         systemUiController.setStatusBarColor(
-            color = Color.Transparent,
+            color = Color(0xFFFFA500),
             darkIcons = true
         )
 
@@ -88,18 +88,18 @@ fun AppNavigator() {
             showMainScreen.value = true // Navigate back to MainScreen
         }
 
-        // Search Screen (handle this as per your requirements)
+        // Search Screen (updated for orange status bar)
     } else if (showSearchScreen.value) {
         // Set the status bar color for SearchScreen
         systemUiController.setStatusBarColor(
-            color = Color.Transparent,
+            color = Color(0xFFFFA500), // Orange status bar color to match search box
             darkIcons = true
         )
 
-        SearchScreen {
+        SearchScreen(onBack = {
             showSearchScreen.value = false // Close the Search screen
             showMainScreen.value = true // Navigate back to MainScreen
-        }
+        })
 
         // About Screen (handle this as per your requirements)
     } else if (showAboutScreen.value) {
@@ -115,4 +115,3 @@ fun AppNavigator() {
         }
     }
 }
-
